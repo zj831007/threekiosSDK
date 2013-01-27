@@ -14,4 +14,12 @@
 
 @interface ImageAction : CommonAction
 
++ (ImageAction *) action;
+
+- (void)upload:(NSNumber *) uid
+   accessToken:(NSString *) accessToken
+           ext:(NSString *) ext
+          type:(NSNumber *) type
+           img:(UIImage *) img;
+
 @end

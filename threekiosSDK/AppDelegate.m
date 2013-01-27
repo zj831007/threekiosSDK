@@ -11,6 +11,7 @@
 #import "GoodsAction.h"
 #import "GoodsCommenAction.h"
 #import "MessageAction.h"
+#import "ImageAction.h"
 
 @implementation AppDelegate
 
@@ -195,7 +196,19 @@
     //===================================================
     //====================image==========================
     //===================================================
-        
+    ImageAction *imageAction = [ImageAction action];
+    imageAction.resultErrorBlock = ^(id result){
+        NSLog(@"%@---", result);
+    };
+    imageAction.resultDataBlock = ^(id result){
+        NSLog(@"%@----2", result);
+    };
+    UIImage *img = [UIImage imageNamed:@"Default.png"];
+    [imageAction upload:@15
+            accessToken:@"6f3b444e0775900cbe9376add9b85661"
+                    ext:@""
+                   type:@1
+                    img:img];
     
     return YES;
 }
