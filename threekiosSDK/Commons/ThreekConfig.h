@@ -9,7 +9,7 @@
 #ifndef threekiosSDK_Config_h
 #define threekiosSDK_Config_h
 
-#define kThreekAPIBaseUrl    @"http://127.0.0.1/threek/"
+#define kThreekAPIBaseUrl    @"http://210.51.190.172/threek/"
 #define kUserAgent           @"ThreeK"
 
 
