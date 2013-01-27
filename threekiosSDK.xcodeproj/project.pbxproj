@@ -249,13 +249,6 @@
 			path = Pojo;
 			sourceTree = "<group>";
 		};
-		D033834E16B4203800AA2FAD /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		D0E5216716B3A22100FB7F2C = {
 			isa = PBXGroup;
 			children = (
@@ -295,7 +288,6 @@
 		D0E5217C16B3A22100FB7F2C /* threekiosSDK */ = {
 			isa = PBXGroup;
 			children = (
-				D033834E16B4203800AA2FAD /* Models */,
 				D033834416B41E2A00AA2FAD /* Pojo */,
 				D033831E16B4000C00AA2FAD /* Commons */,
 				D033831816B3FF5F00AA2FAD /* Actons */,
