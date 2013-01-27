@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "UserAction.h"
 
 @implementation AppDelegate
 
@@ -22,6 +23,68 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    
+    
+    //reg
+    UserAction *userAction = [UserAction action];
+    userAction.resultErrorBlock = ^(id result){
+        NSLog(@"%@---", result);
+    };
+    userAction.resultDataBlock = ^(id result){
+        NSLog(@"%@----2", result);
+    };
+    
+    //===================================================
+    //=====================user==========================
+    //===================================================
+    //[userAction reg:@"justin3" password:@"123456"];
+    
+    //login
+    //[userAction login:@"justin3" password:@"123456"];
+    
+    //logout
+    //[userAction logout:@16 accessToken:@"607025c85a4e3ba2aa8d3969adb7438f"];
+    
+    //上线，离线
+    //[userAction status:@15 accessToken:@"6f3b444e0775900cbe9376add9b85661" op:@2];
+    
+    //profile
+    //[userAction getProfile:@15];
+    
+    //edit profile
+    NSMutableDictionary *userinfo = [[[NSMutableDictionary alloc]
+                                      initWithObjectsAndKeys:@15,@"uid",
+                                      @"6f3b444e0775900cbe9376add9b85661", @"access_token",
+                                      @"1", @"gender",
+                                      @"justin", @"desc",
+                                      @"hahaha", @"nickname",nil
+                                      ]autorelease];
+   
+    [userAction editProfile:userinfo];
+    
+    //===================================================
+    //=====================goods=========================
+    //===================================================
+    
+    
+    
+    //===================================================
+    //==============goods comment========================
+    //===================================================
+    
+    
+    //===================================================
+    //==================message==========================
+    //===================================================
+    
+    
+    //===================================================
+    //====================image==========================
+    //===================================================
+    
+    
+    
     return YES;
 }
 
