@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "UserAction.h"
+#import "GoodsAction.h"
+
 
 @implementation AppDelegate
 
@@ -38,36 +40,85 @@
     //===================================================
     //=====================user==========================
     //===================================================
+    
+    //注册
     //[userAction reg:@"justin3" password:@"123456"];
     
-    //login
+    //登陆
     //[userAction login:@"justin3" password:@"123456"];
     
-    //logout
+    //退出登陆
     //[userAction logout:@16 accessToken:@"607025c85a4e3ba2aa8d3969adb7438f"];
     
     //上线，离线
     //[userAction status:@15 accessToken:@"6f3b444e0775900cbe9376add9b85661" op:@2];
     
-    //profile
+    //个人资料
     //[userAction getProfile:@15];
     
-    //edit profile
+    //修改个人资料
     NSMutableDictionary *userinfo = [[[NSMutableDictionary alloc]
                                       initWithObjectsAndKeys:@15,@"uid",
                                       @"6f3b444e0775900cbe9376add9b85661", @"access_token",
-                                      @"1", @"gender",
-                                      @"justin", @"desc",
-                                      @"hahaha", @"nickname",nil
+                                      @"2", @"gender",
+                                      @"justinaaaa", @"desc",
+                                      @"hahahajustin", @"nickname",nil
                                       ]autorelease];
    
-    [userAction editProfile:userinfo];
+    //[userAction editProfile:userinfo];
     
     //===================================================
     //=====================goods=========================
     //===================================================
+    GoodsAction *goodsAction = [GoodsAction action];
+    goodsAction.resultErrorBlock = ^(id result){
+        NSLog(@"%@---", result);
+    };
+    goodsAction.resultDataBlock = ^(id result){
+        NSLog(@"%@----2", result);
+    };
+
+    //发布商品
+    NSMutableDictionary *goodsinfo = [[[NSMutableDictionary alloc]
+                                      initWithObjectsAndKeys:
+                                      @15,@"uid",
+                                      @"6f3b444e0775900cbe9376add9b85661", @"access_token",
+                                      @"goods1", @"title",
+                                      @"desc 1", @"desc",
+                                      @"0", @"money",
+                                       @"10.444", @"lon",
+                                       @"108.33", @"lat",nil
+                                      ]autorelease];
+    //[goodsAction publish:goodsinfo];
     
+    //修改商品
+    NSMutableDictionary *goodsinfo2 = [[[NSMutableDictionary alloc]
+                                       initWithObjectsAndKeys:
+                                       @15,@"uid",
+                                       @"6f3b444e0775900cbe9376add9b85661", @"access_token",
+                                       @"15135927787235661",@"goods_id",
+                                       @"goods1modiyf", @"title",
+                                       @"desc 1 modify", @"desc",
+                                       @"10", @"money",
+                                       @"110.444", @"lon",
+                                       @"118.33", @"lat",nil
+                                       ]autorelease];
+    //[goodsAction publish:goodsinfo2];
     
+    //商品详情
+    //[goodsAction detail:@"15135927787235661"];
+    
+    //下架商品
+    //[goodsAction offline:@15 accessToken:@"6f3b444e0775900cbe9376add9b85661" goodsId:@"15135927787235661"];
+    
+    //商品列表
+    NSMutableDictionary *params = [[[NSMutableDictionary alloc]
+                                        initWithObjectsAndKeys:
+                                        @"15",@"keyword",
+                                        @"2",@"filter",
+                                        @"0", @"status",nil
+                                        ]autorelease];
+    [goodsAction getList:params];
     
     //===================================================
     //==============goods comment========================

@@ -64,8 +64,17 @@
 }
 
 - (void)request:(ThreekRequest *)request didLoad:(id)result{
+    
+    
+    if ([result isKindOfClass:[NSArray class]]) {
+        if(_resultDataBlock != nil){
+            _resultDataBlock(result);
+        }
+    }
+    
+    
     if ([result isKindOfClass:[NSDictionary class]]){
-       
+        
         if ([result objectForKey:@"error_code"] != nil){
             
             if(_resultErrorBlock != nil){

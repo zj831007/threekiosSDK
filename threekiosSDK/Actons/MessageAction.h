@@ -7,7 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ThreekConfig.h"
+#import "CommonAction.h"
+#import "ThreekRequest.h"
 
-@interface MessageAction : NSObject
+
+@interface MessageAction : CommonAction
 
 @end

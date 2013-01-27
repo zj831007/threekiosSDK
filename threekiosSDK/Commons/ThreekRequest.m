@@ -57,7 +57,7 @@
     [self processParams:params];
     
     NSString* urlString = [[self class] serializeURL:url params:params];
-    
+    NSLog(@"%@", urlString);
     
     ASIHTTPRequest *request  = [ASIHTTPRequest requestWithURL:[NSURL URLWithString:urlString]];
     [request setValidatesSecureCertificate:NO];
@@ -71,8 +71,8 @@
         }
         
     }else{
-        
-        [self performSelectorInBackground:@selector(handleResponseData:) withObject:[request responseData]];
+        [self handleResponseData:[request responseData]];
+        //[self performSelectorInBackground:@selector(handleResponseData:) withObject:[request responseData]];
     }
 
 }

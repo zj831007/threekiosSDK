@@ -7,7 +7,23 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ThreekConfig.h"
+#import "CommonAction.h"
+#import "ThreekRequest.h"
 
-@interface GoodsAction : NSObject
+
+@interface GoodsAction : CommonAction
+
+
++ (GoodsAction *) action;
+
+- (void)publish:(NSMutableDictionary *)goodsInfo;
+
+- (void)detail:(NSString *) goodsId;
+
+- (void)offline:(NSNumber *) uid accessToken:(NSString *)accessToken goodsId:(NSString *)goodsId;
+
+- (void)getList:(NSMutableDictionary *)params;
+
 
 @end
