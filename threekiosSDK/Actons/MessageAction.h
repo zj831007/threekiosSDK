@@ -14,4 +14,22 @@
 
 @interface MessageAction : CommonAction
 
++ (MessageAction *) action;
+
+- (void)send:(NSNumber *) uid
+ accessToken:(NSString *) accessToken
+       toUid:(NSNumber *) toUid
+     content:(NSString *) content;
+
+- (void)getList:(NSMutableDictionary *)params;
+
+- (void)getDetailList:(NSMutableDictionary *)params;
+
+- (void)del:(NSNumber *) uid
+ accessToken:(NSString *) accessToken
+   otherUid:(NSNumber *) otherUid;
+
+- (void)unread:(NSNumber *) uid
+   accessToken:(NSString *) accessToken;
+
 @end

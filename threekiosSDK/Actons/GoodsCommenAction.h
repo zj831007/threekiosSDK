@@ -14,4 +14,19 @@
 
 @interface GoodsCommenAction : CommonAction
 
++ (GoodsCommenAction *) action;
+
+- (void)post:(NSNumber *) uid
+ accessToken:(NSString *) accessToken
+     goodsId:(NSString *) goodsId
+    question:(NSString *) question;
+
+- (void)reply:(NSNumber *) uid
+  accessToken:(NSString *) accessToken
+          cid:(NSString *) cid
+       answer:(NSString *) answer;
+
+
+- (void)getList:(NSMutableDictionary *)params;
+
 @end

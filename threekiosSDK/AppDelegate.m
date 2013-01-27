@@ -9,7 +9,8 @@
 #import "AppDelegate.h"
 #import "UserAction.h"
 #import "GoodsAction.h"
-
+#import "GoodsCommenAction.h"
+#import "MessageAction.h"
 
 @implementation AppDelegate
 
@@ -118,23 +119,83 @@
                                         @"2",@"filter",
                                         @"0", @"status",nil
                                         ]autorelease];
-    [goodsAction getList:params];
+    //[goodsAction getList:params];
+    
     
     //===================================================
     //==============goods comment========================
     //===================================================
     
+    GoodsCommenAction *goodsCommentAction = [GoodsCommenAction action];
+    goodsCommentAction.resultErrorBlock = ^(id result){
+        NSLog(@"%@---", result);
+    };
+    goodsCommentAction.resultDataBlock = ^(id result){
+        NSLog(@"%@----2", result);
+    };
+    
+    //咨询
+    //[goodsCommentAction post:@15 accessToken:@"6f3b444e0775900cbe9376add9b85661"
+    //                 goodsId:@"15135927787235661" question:@"test question1"];
+    
+    //回复咨询
+    //[goodsCommentAction reply:@15 accessToken:@"6f3b444e0775900cbe9376add9b85661"
+    //                      cid:@"510512577a042b12b0000001" answer:@"test answer1"];
+    
+    //咨询列表
+    NSMutableDictionary *commentParams = [[[NSMutableDictionary alloc]
+                                    initWithObjectsAndKeys:
+                                    @"15135927787235661",@"goods_id",nil
+                                    ]autorelease];
+    //[goodsCommentAction getList:commentParams];
+    
     
     //===================================================
     //==================message==========================
     //===================================================
+    MessageAction *messageAction = [MessageAction action];
+    messageAction.resultErrorBlock = ^(id result){
+        NSLog(@"%@---", result);
+    };
+    messageAction.resultDataBlock = ^(id result){
+        NSLog(@"%@----2", result);
+    };
     
+    //发私信
+//    [messageAction send:@15
+//            accessToken:@"6f3b444e0775900cbe9376add9b85661"
+//                  toUid:@1
+//                content:@"test"];
+    
+    //获取私信列表
+    NSMutableDictionary *messageParams = [[[NSMutableDictionary alloc]
+                                    initWithObjectsAndKeys:
+                                           @"15",@"uid",
+                                           @"6f3b444e0775900cbe9376add9b85661", @"access_token"
+                                           ,nil
+                                    ]autorelease];
+    //[messageAction getList:messageParams];
+    
+    //获取聊天列表
+    NSMutableDictionary *messageDetailParams = [[[NSMutableDictionary alloc]
+                                           initWithObjectsAndKeys:
+                                           @"15",@"uid",
+                                           @"6f3b444e0775900cbe9376add9b85661", @"access_token",
+                                           @"1", @"other_uid",nil
+                                           ]autorelease];
+    //[messageAction getDetailList:messageDetailParams];
+    
+    //删除私信
+    //[messageAction del:@15 accessToken:@"6f3b444e0775900cbe9376add9b85661" otherUid:@1];
+    
+    //未读私信数
+    //[messageAction unread:@15 accessToken:@"6f3b444e0775900cbe9376add9b85661"];
+
     
     //===================================================
     //====================image==========================
     //===================================================
-    
-    
+        
     
     return YES;
 }
