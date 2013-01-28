@@ -71,8 +71,10 @@
         }
         
     }else{
-        [self handleResponseData:[request responseData]];
-        //[self performSelectorInBackground:@selector(handleResponseData:) withObject:[request responseData]];
+        NSString *responseString = [request responseString];
+        NSData *jsonData = [responseString dataUsingEncoding:NSUTF8StringEncoding];
+        [self handleResponseData:jsonData];
+
     }
 
 }
@@ -109,13 +111,15 @@
     [request startSynchronous];
     NSError *error = [request error];
     if (error) {
+                
         if ([_delegate respondsToSelector:@selector(request:didFailWithError:)]) {
             [_delegate request:self didFailWithError:error];
         }
         
     }else{
-
-        [self performSelectorInBackground:@selector(handleResponseData:) withObject:[request responseData]];
+        NSString *responseString = [request responseString];
+        NSData *jsonData = [responseString dataUsingEncoding:NSUTF8StringEncoding];
+        [self handleResponseData:jsonData];
     }
     
 }
@@ -170,13 +174,13 @@
     NSError *parseError = nil;
     
     JSONDecoder *parser = [JSONDecoder decoder];
+    
     id result = [parser mutableObjectWithData:data error:&parseError];
     
 	if (parseError){
-        NSLog(@"Parse Json error!%@", [[[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding]autorelease]);
+        NSLog(@"Parse Json error!%@", [[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]autorelease]);
 	}
-    
-    if ([_delegate respondsToSelector:@selector(request:didLoad:)]) {
+        if ([_delegate respondsToSelector:@selector(request:didLoad:)]) {
         [_delegate request:self didLoad:result];
     }
    

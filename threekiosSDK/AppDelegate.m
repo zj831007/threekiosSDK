@@ -33,7 +33,7 @@
     //reg
     UserAction *userAction = [UserAction action];
     userAction.resultErrorBlock = ^(id result){
-        NSLog(@"%@---", result);
+        NSLog(@"%@----1", [result objectForKey:@"error_desc"]);
     };
     userAction.resultDataBlock = ^(id result){
         NSLog(@"%@----2", result);
@@ -44,7 +44,7 @@
     //===================================================
     
     //注册
-    //[userAction reg:@"justin3" password:@"123456"];
+    [userAction reg:@"justin3" password:@"123456"];
     
     //登陆
     //[userAction login:@"justin3" password:@"123456"];
@@ -204,11 +204,11 @@
         NSLog(@"%@----2", result);
     };
     UIImage *img = [UIImage imageNamed:@"Default.png"];
-    [imageAction upload:@15
-            accessToken:@"6f3b444e0775900cbe9376add9b85661"
-                    ext:@""
-                   type:@1
-                    img:img];
+//    [imageAction upload:@15
+//            accessToken:@"6f3b444e0775900cbe9376add9b85661"
+//                    ext:@""
+//                   type:@1
+//                    img:img];
     
     return YES;
 }
