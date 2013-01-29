@@ -31,13 +31,13 @@
     
     
     //reg
-    UserAction *userAction = [UserAction action];
-    userAction.resultErrorBlock = ^(id result){
-        NSLog(@"%@----1", [result objectForKey:@"error_desc"]);
-    };
-    userAction.resultDataBlock = ^(id result){
-        NSLog(@"%@----2", result);
-    };
+//    UserAction *userAction = [UserAction action];
+//    userAction.resultErrorBlock = ^(id result){
+//        NSLog(@"%@----1", [result objectForKey:@"error_desc"]);
+//    };
+//    userAction.resultDataBlock = ^(id result){
+//        NSLog(@"%@----2", result);
+//    };
     
     //===================================================
     //=====================user==========================
@@ -47,7 +47,7 @@
     //[userAction reg:@"justin6" password:@"123456"];
     
     //登陆
-    [userAction login:@"justin5" password:@"123456"];
+//    [userAction login:@"justin5" password:@"123456"];
     
     //退出登陆
     //[userAction logout:@16 accessToken:@"607025c85a4e3ba2aa8d3969adb7438f"];
@@ -59,52 +59,52 @@
     //[userAction getProfile:@15];
     
     //修改个人资料
-    NSMutableDictionary *userinfo = [[[NSMutableDictionary alloc]
-                                      initWithObjectsAndKeys:@15,@"uid",
-                                      @"6f3b444e0775900cbe9376add9b85661", @"access_token",
-                                      @"2", @"gender",
-                                      @"justinaaaa", @"desc",
-                                      @"hahahajustin", @"nickname",nil
-                                      ]autorelease];
+//    NSMutableDictionary *userinfo = [[[NSMutableDictionary alloc]
+//                                      initWithObjectsAndKeys:@15,@"uid",
+//                                      @"6f3b444e0775900cbe9376add9b85661", @"access_token",
+//                                      @"2", @"gender",
+//                                      @"justinaaaa", @"desc",
+//                                      @"hahahajustin", @"nickname",nil
+//                                      ]autorelease];
    
     //[userAction editProfile:userinfo];
     
     //===================================================
     //=====================goods=========================
     //===================================================
-    GoodsAction *goodsAction = [GoodsAction action];
-    goodsAction.resultErrorBlock = ^(id result){
-        NSLog(@"%@---", result);
-    };
-    goodsAction.resultDataBlock = ^(id result){
-        NSLog(@"%@----2", result);
-    };
+//    GoodsAction *goodsAction = [GoodsAction action];
+//    goodsAction.resultErrorBlock = ^(id result){
+//        NSLog(@"%@---", result);
+//    };
+//    goodsAction.resultDataBlock = ^(id result){
+//        NSLog(@"%@----2", result);
+//    };
 
     //发布商品
-    NSMutableDictionary *goodsinfo = [[[NSMutableDictionary alloc]
-                                      initWithObjectsAndKeys:
-                                      @15,@"uid",
-                                      @"6f3b444e0775900cbe9376add9b85661", @"access_token",
-                                      @"goods1", @"title",
-                                      @"desc 1", @"desc",
-                                      @"0", @"money",
-                                       @"10.444", @"lon",
-                                       @"108.33", @"lat",nil
-                                      ]autorelease];
+//    NSMutableDictionary *goodsinfo = [[[NSMutableDictionary alloc]
+//                                      initWithObjectsAndKeys:
+//                                      @15,@"uid",
+//                                      @"6f3b444e0775900cbe9376add9b85661", @"access_token",
+//                                      @"goods1", @"title",
+//                                      @"desc 1", @"desc",
+//                                      @"0", @"money",
+//                                       @"10.444", @"lon",
+//                                       @"108.33", @"lat",nil
+//                                      ]autorelease];
     //[goodsAction publish:goodsinfo];
     
     //修改商品
-    NSMutableDictionary *goodsinfo2 = [[[NSMutableDictionary alloc]
-                                       initWithObjectsAndKeys:
-                                       @15,@"uid",
-                                       @"6f3b444e0775900cbe9376add9b85661", @"access_token",
-                                       @"15135927787235661",@"goods_id",
-                                       @"goods1modiyf", @"title",
-                                       @"desc 1 modify", @"desc",
-                                       @"10", @"money",
-                                       @"110.444", @"lon",
-                                       @"118.33", @"lat",nil
-                                       ]autorelease];
+//    NSMutableDictionary *goodsinfo2 = [[[NSMutableDictionary alloc]
+//                                       initWithObjectsAndKeys:
+//                                       @15,@"uid",
+//                                       @"6f3b444e0775900cbe9376add9b85661", @"access_token",
+//                                       @"15135927787235661",@"goods_id",
+//                                       @"goods1modiyf", @"title",
+//                                       @"desc 1 modify", @"desc",
+//                                       @"10", @"money",
+//                                       @"110.444", @"lon",
+//                                       @"118.33", @"lat",nil
+//                                       ]autorelease];
     //[goodsAction publish:goodsinfo2];
     
     //商品详情
@@ -114,12 +114,12 @@
     //[goodsAction offline:@15 accessToken:@"6f3b444e0775900cbe9376add9b85661" goodsId:@"15135927787235661"];
     
     //商品列表
-    NSMutableDictionary *params = [[[NSMutableDictionary alloc]
-                                        initWithObjectsAndKeys:
-                                        @"15",@"keyword",
-                                        @"2",@"filter",
-                                        @"0", @"status",nil
-                                        ]autorelease];
+//    NSMutableDictionary *params = [[[NSMutableDictionary alloc]
+//                                        initWithObjectsAndKeys:
+//                                        @"15",@"keyword",
+//                                        @"2",@"filter",
+//                                        @"0", @"status",nil
+//                                        ]autorelease];
     //[goodsAction getList:params];
     
     
@@ -127,13 +127,13 @@
     //==============goods comment========================
     //===================================================
     
-    GoodsCommenAction *goodsCommentAction = [GoodsCommenAction action];
-    goodsCommentAction.resultErrorBlock = ^(id result){
-        NSLog(@"%@---", result);
-    };
-    goodsCommentAction.resultDataBlock = ^(id result){
-        NSLog(@"%@----2", result);
-    };
+//    GoodsCommenAction *goodsCommentAction = [GoodsCommenAction action];
+//    goodsCommentAction.resultErrorBlock = ^(id result){
+//        NSLog(@"%@---", result);
+//    };
+//    goodsCommentAction.resultDataBlock = ^(id result){
+//        NSLog(@"%@----2", result);
+//    };
     
     //咨询
     //[goodsCommentAction post:@15 accessToken:@"6f3b444e0775900cbe9376add9b85661"
@@ -144,23 +144,23 @@
     //                      cid:@"510512577a042b12b0000001" answer:@"test answer1"];
     
     //咨询列表
-    NSMutableDictionary *commentParams = [[[NSMutableDictionary alloc]
-                                    initWithObjectsAndKeys:
-                                    @"15135927787235661",@"goods_id",nil
-                                    ]autorelease];
+//    NSMutableDictionary *commentParams = [[[NSMutableDictionary alloc]
+//                                    initWithObjectsAndKeys:
+//                                    @"15135927787235661",@"goods_id",nil
+//                                    ]autorelease];
     //[goodsCommentAction getList:commentParams];
     
     
     //===================================================
     //==================message==========================
     //===================================================
-    MessageAction *messageAction = [MessageAction action];
-    messageAction.resultErrorBlock = ^(id result){
-        NSLog(@"%@---", result);
-    };
-    messageAction.resultDataBlock = ^(id result){
-        NSLog(@"%@----2", result);
-    };
+//    MessageAction *messageAction = [MessageAction action];
+//    messageAction.resultErrorBlock = ^(id result){
+//        NSLog(@"%@---", result);
+//    };
+//    messageAction.resultDataBlock = ^(id result){
+//        NSLog(@"%@----2", result);
+//    };
     
     //发私信
 //    [messageAction send:@15
@@ -169,21 +169,21 @@
 //                content:@"test"];
     
     //获取私信列表
-    NSMutableDictionary *messageParams = [[[NSMutableDictionary alloc]
-                                    initWithObjectsAndKeys:
-                                           @"15",@"uid",
-                                           @"6f3b444e0775900cbe9376add9b85661", @"access_token"
-                                           ,nil
-                                    ]autorelease];
+//    NSMutableDictionary *messageParams = [[[NSMutableDictionary alloc]
+//                                    initWithObjectsAndKeys:
+//                                           @"15",@"uid",
+//                                           @"6f3b444e0775900cbe9376add9b85661", @"access_token"
+//                                           ,nil
+//                                    ]autorelease];
     //[messageAction getList:messageParams];
     
     //获取聊天列表
-    NSMutableDictionary *messageDetailParams = [[[NSMutableDictionary alloc]
-                                           initWithObjectsAndKeys:
-                                           @"15",@"uid",
-                                           @"6f3b444e0775900cbe9376add9b85661", @"access_token",
-                                           @"1", @"other_uid",nil
-                                           ]autorelease];
+//    NSMutableDictionary *messageDetailParams = [[[NSMutableDictionary alloc]
+//                                           initWithObjectsAndKeys:
+//                                           @"15",@"uid",
+//                                           @"6f3b444e0775900cbe9376add9b85661", @"access_token",
+//                                           @"1", @"other_uid",nil
+//                                           ]autorelease];
     //[messageAction getDetailList:messageDetailParams];
     
     //删除私信
@@ -196,14 +196,14 @@
     //===================================================
     //====================image==========================
     //===================================================
-    ImageAction *imageAction = [ImageAction action];
-    imageAction.resultErrorBlock = ^(id result){
-        NSLog(@"%@---", result);
-    };
-    imageAction.resultDataBlock = ^(id result){
-        NSLog(@"%@----2", result);
-    };
-    UIImage *img = [UIImage imageNamed:@"Default.png"];
+//    ImageAction *imageAction = [ImageAction action];
+//    imageAction.resultErrorBlock = ^(id result){
+//        NSLog(@"%@---", result);
+//    };
+//    imageAction.resultDataBlock = ^(id result){
+//        NSLog(@"%@----2", result);
+//    };
+//    UIImage *img = [UIImage imageNamed:@"Default.png"];
 //    [imageAction upload:@15
 //            accessToken:@"6f3b444e0775900cbe9376add9b85661"
 //                    ext:@""
