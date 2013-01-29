@@ -26,7 +26,7 @@
 - (void)testReg{
     UserAction *userAction = [UserAction action];
     userAction.resultErrorBlock = ^(id result){
-        STAssertEqualObjects([result objectForKey:@"error_code"], @"10006", @"用户重复");
+        STAssertEqualObjects([result objectForKey:@"error_code"], @"10006", @"用户名重复判断失败");
     };
     
     [userAction reg:@"justin6" password:@"123456"];
