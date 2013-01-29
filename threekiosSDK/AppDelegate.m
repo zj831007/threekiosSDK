@@ -44,10 +44,10 @@
     //===================================================
     
     //注册
-    [userAction reg:@"justin3" password:@"123456"];
+    //[userAction reg:@"justin6" password:@"123456"];
     
     //登陆
-    //[userAction login:@"justin3" password:@"123456"];
+    [userAction login:@"justin5" password:@"123456"];
     
     //退出登陆
     //[userAction logout:@16 accessToken:@"607025c85a4e3ba2aa8d3969adb7438f"];

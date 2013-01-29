@@ -35,7 +35,6 @@
 		D0E5219616B3A22100FB7F2C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0E5217616B3A22100FB7F2C /* UIKit.framework */; };
 		D0E5219716B3A22100FB7F2C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0E5217816B3A22100FB7F2C /* Foundation.framework */; };
 		D0E5219F16B3A22100FB7F2C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0E5219D16B3A22100FB7F2C /* InfoPlist.strings */; };
-		D0E521A216B3A22100FB7F2C /* threekiosSDKTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E521A116B3A22100FB7F2C /* threekiosSDKTests.m */; };
 		D0E522FB16B3AB6200FB7F2C /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E5227B16B3AB6200FB7F2C /* ASIAuthenticationDialog.m */; };
 		D0E522FC16B3AB6200FB7F2C /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E5227E16B3AB6200FB7F2C /* ASIDataCompressor.m */; };
 		D0E522FD16B3AB6200FB7F2C /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E5228016B3AB6200FB7F2C /* ASIDataDecompressor.m */; };
@@ -60,6 +59,8 @@
 		D0E5231016B3AB6200FB7F2C /* ASIS3Request.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E522AE16B3AB6200FB7F2C /* ASIS3Request.m */; };
 		D0E5231116B3AB6200FB7F2C /* ASIS3ServiceRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E522B016B3AB6200FB7F2C /* ASIS3ServiceRequest.m */; };
 		D0E5232116B3AB6200FB7F2C /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E522D116B3AB6200FB7F2C /* MBProgressHUD.m */; };
+		D0F07E1616B81F09008D2EBE /* UserActionTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F07E1516B81F09008D2EBE /* UserActionTestCase.m */; };
+		D0F07E1A16B82577008D2EBE /* GoodsActionTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F07E1916B82577008D2EBE /* GoodsActionTestCase.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,8 +117,6 @@
 		D0E5219416B3A22100FB7F2C /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		D0E5219C16B3A22100FB7F2C /* threekiosSDKTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "threekiosSDKTests-Info.plist"; sourceTree = "<group>"; };
 		D0E5219E16B3A22100FB7F2C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		D0E521A016B3A22100FB7F2C /* threekiosSDKTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = threekiosSDKTests.h; sourceTree = "<group>"; };
-		D0E521A116B3A22100FB7F2C /* threekiosSDKTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = threekiosSDKTests.m; sourceTree = "<group>"; };
 		D0E5227A16B3AB6200FB7F2C /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIAuthenticationDialog.h; sourceTree = "<group>"; };
 		D0E5227B16B3AB6200FB7F2C /* ASIAuthenticationDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIAuthenticationDialog.m; sourceTree = "<group>"; };
 		D0E5227C16B3AB6200FB7F2C /* ASICacheDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASICacheDelegate.h; sourceTree = "<group>"; };
@@ -171,6 +170,10 @@
 		D0E522B016B3AB6200FB7F2C /* ASIS3ServiceRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIS3ServiceRequest.m; sourceTree = "<group>"; };
 		D0E522D016B3AB6200FB7F2C /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		D0E522D116B3AB6200FB7F2C /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		D0F07E1416B81F09008D2EBE /* UserActionTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserActionTestCase.h; sourceTree = "<group>"; };
+		D0F07E1516B81F09008D2EBE /* UserActionTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserActionTestCase.m; sourceTree = "<group>"; };
+		D0F07E1816B82577008D2EBE /* GoodsActionTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodsActionTestCase.h; sourceTree = "<group>"; };
+		D0F07E1916B82577008D2EBE /* GoodsActionTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsActionTestCase.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -317,9 +320,11 @@
 		D0E5219A16B3A22100FB7F2C /* threekiosSDKTests */ = {
 			isa = PBXGroup;
 			children = (
-				D0E521A016B3A22100FB7F2C /* threekiosSDKTests.h */,
-				D0E521A116B3A22100FB7F2C /* threekiosSDKTests.m */,
+				D0F07E1416B81F09008D2EBE /* UserActionTestCase.h */,
+				D0F07E1516B81F09008D2EBE /* UserActionTestCase.m */,
 				D0E5219B16B3A22100FB7F2C /* Supporting Files */,
+				D0F07E1816B82577008D2EBE /* GoodsActionTestCase.h */,
+				D0F07E1916B82577008D2EBE /* GoodsActionTestCase.m */,
 			);
 			path = threekiosSDKTests;
 			sourceTree = "<group>";
@@ -610,7 +615,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0E521A216B3A22100FB7F2C /* threekiosSDKTests.m in Sources */,
+				D0F07E1616B81F09008D2EBE /* UserActionTestCase.m in Sources */,
+				D0F07E1A16B82577008D2EBE /* GoodsActionTestCase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
