@@ -61,6 +61,9 @@
 		D0E5232116B3AB6200FB7F2C /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E522D116B3AB6200FB7F2C /* MBProgressHUD.m */; };
 		D0F07E1616B81F09008D2EBE /* UserActionTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F07E1516B81F09008D2EBE /* UserActionTestCase.m */; };
 		D0F07E1A16B82577008D2EBE /* GoodsActionTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F07E1916B82577008D2EBE /* GoodsActionTestCase.m */; };
+		D0F07E1D16B82730008D2EBE /* ImgActionTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F07E1C16B82730008D2EBE /* ImgActionTestCase.m */; };
+		D0F07E2016B82740008D2EBE /* MessageActionTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F07E1F16B82740008D2EBE /* MessageActionTestCase.m */; };
+		D0F07E2316B8275C008D2EBE /* CommentActionTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F07E2216B8275C008D2EBE /* CommentActionTestCase.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -174,6 +177,12 @@
 		D0F07E1516B81F09008D2EBE /* UserActionTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserActionTestCase.m; sourceTree = "<group>"; };
 		D0F07E1816B82577008D2EBE /* GoodsActionTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodsActionTestCase.h; sourceTree = "<group>"; };
 		D0F07E1916B82577008D2EBE /* GoodsActionTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsActionTestCase.m; sourceTree = "<group>"; };
+		D0F07E1B16B82730008D2EBE /* ImgActionTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImgActionTestCase.h; sourceTree = "<group>"; };
+		D0F07E1C16B82730008D2EBE /* ImgActionTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImgActionTestCase.m; sourceTree = "<group>"; };
+		D0F07E1E16B82740008D2EBE /* MessageActionTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageActionTestCase.h; sourceTree = "<group>"; };
+		D0F07E1F16B82740008D2EBE /* MessageActionTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageActionTestCase.m; sourceTree = "<group>"; };
+		D0F07E2116B8275C008D2EBE /* CommentActionTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentActionTestCase.h; sourceTree = "<group>"; };
+		D0F07E2216B8275C008D2EBE /* CommentActionTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentActionTestCase.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -320,11 +329,17 @@
 		D0E5219A16B3A22100FB7F2C /* threekiosSDKTests */ = {
 			isa = PBXGroup;
 			children = (
-				D0F07E1416B81F09008D2EBE /* UserActionTestCase.h */,
-				D0F07E1516B81F09008D2EBE /* UserActionTestCase.m */,
 				D0E5219B16B3A22100FB7F2C /* Supporting Files */,
 				D0F07E1816B82577008D2EBE /* GoodsActionTestCase.h */,
 				D0F07E1916B82577008D2EBE /* GoodsActionTestCase.m */,
+				D0F07E1B16B82730008D2EBE /* ImgActionTestCase.h */,
+				D0F07E1C16B82730008D2EBE /* ImgActionTestCase.m */,
+				D0F07E1416B81F09008D2EBE /* UserActionTestCase.h */,
+				D0F07E1516B81F09008D2EBE /* UserActionTestCase.m */,
+				D0F07E1E16B82740008D2EBE /* MessageActionTestCase.h */,
+				D0F07E1F16B82740008D2EBE /* MessageActionTestCase.m */,
+				D0F07E2116B8275C008D2EBE /* CommentActionTestCase.h */,
+				D0F07E2216B8275C008D2EBE /* CommentActionTestCase.m */,
 			);
 			path = threekiosSDKTests;
 			sourceTree = "<group>";
@@ -617,6 +632,9 @@
 			files = (
 				D0F07E1616B81F09008D2EBE /* UserActionTestCase.m in Sources */,
 				D0F07E1A16B82577008D2EBE /* GoodsActionTestCase.m in Sources */,
+				D0F07E1D16B82730008D2EBE /* ImgActionTestCase.m in Sources */,
+				D0F07E2016B82740008D2EBE /* MessageActionTestCase.m in Sources */,
+				D0F07E2316B8275C008D2EBE /* CommentActionTestCase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
