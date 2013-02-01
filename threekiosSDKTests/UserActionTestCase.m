@@ -104,7 +104,7 @@
     
     UserAction *userAction = [UserAction action];
     userAction.resultErrorBlock = ^(id result){
-        STAssertEqualObjects([result objectForKey:@"error_code"], @"10007", @"用户ID不存在");
+        STAssertEqualObjects([result objectForKey:@"error_code"], @"10007", @"昵称不能包含敏感词");
     };
     [userAction editProfile:[@{@"nickname":@"法轮功"} mutableCopy]];
 }
