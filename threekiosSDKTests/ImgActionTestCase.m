@@ -26,7 +26,7 @@
 - (void)testUpload{
     ImageAction *imageAction = [ImageAction action];
     imageAction.resultErrorBlock = ^(id result){
-        STAssertEqualObjects([result objectForKey:@"error_code"], @"20003", @"图片不能为空");
+        STAssertEqualObjects([result objectForKey:@"error_code"], @"20002", @"图片不能为空");
     };
     
     [imageAction upload:@1 accessToken:@"s" ext:@"3" type:@1 img:nil];

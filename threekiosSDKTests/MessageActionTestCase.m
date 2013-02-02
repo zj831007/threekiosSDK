@@ -28,10 +28,10 @@
 - (void)testSend{
     MessageAction *messageAction = [MessageAction action];
     messageAction.resultErrorBlock = ^(id result){
-        STAssertEqualObjects([result objectForKey:@"error_code"], @"50000", @"发送方或接收方不存在");
+        STAssertEqualObjects([result objectForKey:@"error_code"], @"10012", @"发送方或接收方不存在");
     };
     
-    [messageAction send:@1 accessToken:@"ere" toUid:@2 content:@"Test"];
+    [messageAction send:@19 accessToken:@"85e9f4674ca3ec54541d7103b3778710" toUid:@2 content:@"Test"];
     
 }
 
@@ -41,7 +41,7 @@
         STAssertEqualObjects([result objectForKey:@"error_code"], @"50001", @"不能给自己发消息");
     };
     
-    [messageAction send:@1 accessToken:@"ere" toUid:@1 content:@"Test"];
+    [messageAction send:@19 accessToken:@"85e9f4674ca3ec54541d7103b3778710" toUid:@19 content:@"Test"];
     
 }
 

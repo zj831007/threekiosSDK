@@ -92,7 +92,7 @@
 #pragma mark Profile test case
 - (void)testProfile{
     UserAction *userAction = [UserAction action];
-    userAction.resultErrorBlock = ^(id result){
+    userAction.resultErrorBlock = ^(id result){ 
         STAssertEqualObjects([result objectForKey:@"error_code"], @"10012", @"用户ID不存在");
     };
     [userAction getProfile:@0];
