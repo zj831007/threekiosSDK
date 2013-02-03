@@ -67,7 +67,7 @@
 - (void)testOffline{
     GoodsAction *goodsAction = [GoodsAction action];
     goodsAction.resultErrorBlock = ^(id result){
-        STAssertEqualObjects([result objectForKey:@"error_code"], @"10006", @"登陆失效");
+        STAssertEqualObjects([result objectForKey:@"error_code"], @"10005", @"登陆失效");
     };
     
     [goodsAction offline:@1 accessToken:@"33" goodsId:@"dd"];
