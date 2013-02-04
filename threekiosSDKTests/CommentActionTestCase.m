@@ -43,7 +43,7 @@
 - (void)testReply{
     GoodsCommenAction *commentAction = [GoodsCommenAction action];
     commentAction.resultErrorBlock = ^(id result){
-        STAssertEqualObjects([result objectForKey:@"error_code"], @"40000", @"商品ID不存在");
+        STAssertEqualObjects([result objectForKey:@"error_code"], @"40000", @"评论id不存在");
     };
     
     [commentAction reply:TEST_UID accessToken:TEST_TOKEN cid:@"dd" answer:@"Test"];
@@ -56,7 +56,7 @@
 - (void)testPost{
     GoodsCommenAction *commentAction = [GoodsCommenAction action];
     commentAction.resultErrorBlock = ^(id result){
-        STAssertEqualObjects([result objectForKey:@"error_code"], @"40000", @"商品ID不存在");
+        STAssertEqualObjects([result objectForKey:@"error_code"], @"30006", @"商品ID不存在");
     };
     
     [commentAction post:TEST_UID accessToken:TEST_TOKEN goodsId:TEST_GOODSID question:@"test"];

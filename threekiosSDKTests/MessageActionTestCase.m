@@ -32,7 +32,7 @@
         STAssertEqualObjects([result objectForKey:@"error_code"], @"10012", @"发送方或接收方不存在");
     };
     
-    [messageAction send:TEST_UID accessToken:TEST_TOKEN toUid:TEST_OTHERUID content:@"Test"];
+    [messageAction send:TEST_UID accessToken:TEST_TOKEN toUid:@-1 content:@"Test"];
     
 }
 
@@ -42,7 +42,7 @@
         STAssertEqualObjects([result objectForKey:@"error_code"], @"50001", @"不能给自己发消息");
     };
     
-    [messageAction send:TEST_UID accessToken:TEST_TOKEN toUid:TEST_OTHERUID content:@"Test"];
+    [messageAction send:TEST_UID accessToken:TEST_TOKEN toUid:TEST_UID content:@"Test"];
     
 }
 
@@ -56,7 +56,7 @@
         STAssertEqualObjects([result objectForKey:@"error_code"], @"10005", @"登陆信息已失效");
     };
     
-    [messageAction del:TEST_UID accessToken:TEST_TOKEN otherUid:TEST_OTHERUID];
+    [messageAction del:TEST_UID accessToken:@"f" otherUid:TEST_OTHERUID];
     
 }
 

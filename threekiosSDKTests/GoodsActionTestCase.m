@@ -33,7 +33,7 @@
         STAssertEqualObjects([result objectForKey:@"error_code"], @"30000", @"发布商品失败");
     };
     
-    [goodsAction publish:[@{@"uid":TEST_UID,@"title":@"test"} mutableCopy]];
+    [goodsAction publish:[@{@"uid":TEST_UID,@"access_token":TEST_TOKEN,@"title":@"test"} mutableCopy]];
                           
     
 }
@@ -44,7 +44,7 @@
         STAssertEqualObjects([result objectForKey:@"error_code"], @"30006", @"商品ID不存在");
     };
     
-    [goodsAction publish:[@{@"uid":TEST_UID,@"title":@"test",@"goods_id":@"no"} mutableCopy]];
+    [goodsAction publish:[@{@"uid":TEST_UID,@"access_token":TEST_TOKEN,@"title":@"test",@"goods_id":@"no"} mutableCopy]];
     
     
 }
@@ -67,10 +67,10 @@
 - (void)testOffline{
     GoodsAction *goodsAction = [GoodsAction action];
     goodsAction.resultErrorBlock = ^(id result){
-        STAssertEqualObjects([result objectForKey:@"error_code"], @"10005", @"登陆失效");
+        STAssertEqualObjects([result objectForKey:@"error_code"], @"30006", @"商品ID不存在");
     };
     
-    [goodsAction offline:TEST_UID accessToken:TEST_TOKEN goodsId:TEST_GOODSID];
+    [goodsAction offline:TEST_UID accessToken:TEST_TOKEN goodsId:@-1];
     
 }
 
