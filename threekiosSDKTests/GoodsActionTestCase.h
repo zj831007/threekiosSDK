@@ -10,4 +10,5 @@
 
 @interface GoodsActionTestCase : SenTestCase
 
+
 @end

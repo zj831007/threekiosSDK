@@ -103,6 +103,7 @@
 		D033834A16B41E2A00AA2FAD /* UserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfo.m; sourceTree = "<group>"; };
 		D033835F16B436D100AA2FAD /* CommonAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonAction.h; sourceTree = "<group>"; };
 		D033836016B436D200AA2FAD /* CommonAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonAction.m; sourceTree = "<group>"; };
+		D0A6D49616BF673B007C668D /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		D0E5217216B3A22100FB7F2C /* threekiosSDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = threekiosSDK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0E5217616B3A22100FB7F2C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D0E5217816B3A22100FB7F2C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -340,6 +341,7 @@
 				D0F07E1F16B82740008D2EBE /* MessageActionTestCase.m */,
 				D0F07E2116B8275C008D2EBE /* CommentActionTestCase.h */,
 				D0F07E2216B8275C008D2EBE /* CommentActionTestCase.m */,
+				D0A6D49616BF673B007C668D /* Constants.h */,
 			);
 			path = threekiosSDKTests;
 			sourceTree = "<group>";

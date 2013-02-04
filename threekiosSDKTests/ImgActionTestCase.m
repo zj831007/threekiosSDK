@@ -8,6 +8,7 @@
 
 #import "ImgActionTestCase.h"
 #import "ImageAction.h"
+#import "Constants.h"
 
 @implementation ImgActionTestCase
 
@@ -29,7 +30,7 @@
         STAssertEqualObjects([result objectForKey:@"error_code"], @"20002", @"图片不能为空");
     };
     
-    [imageAction upload:@1 accessToken:@"s" ext:@"3" type:@1 img:nil];
+    [imageAction upload:TEST_UID accessToken:TEST_TOKEN ext:@"3" type:@1 img:nil];
     
 }
 
@@ -40,7 +41,7 @@
         STAssertEqualObjects([result objectForKey:@"error_code"], @"20004", @"图片上传类型不正确");
     };
     
-    [imageAction upload:@1 accessToken:@"s" ext:@"3" type:@9 img:[UIImage imageNamed:@"Default.png"]];
+    [imageAction upload:TEST_UID accessToken:TEST_TOKEN ext:@"3" type:@9 img:[UIImage imageNamed:@"Default.png"]];
     
 }
 
@@ -51,7 +52,7 @@
         STAssertEqualObjects([result objectForKey:@"error_code"], @"30006", @"商品ID不存在");
     };
     
-    [imageAction upload:@1 accessToken:@"s" ext:@"3" type:@1 img:[UIImage imageNamed:@"Default.png"]];
+    [imageAction upload:TEST_UID accessToken:TEST_TOKEN ext:@"3" type:@1 img:[UIImage imageNamed:@"Default.png"]];
     
 }
 

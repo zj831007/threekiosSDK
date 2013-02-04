@@ -8,6 +8,7 @@
 
 #import "MessageActionTestCase.h"
 #import "MessageAction.h"
+#import "Constants.h"
 
 @implementation MessageActionTestCase
 
@@ -31,7 +32,7 @@
         STAssertEqualObjects([result objectForKey:@"error_code"], @"10012", @"发送方或接收方不存在");
     };
     
-    [messageAction send:@19 accessToken:@"85e9f4674ca3ec54541d7103b3778710" toUid:@2 content:@"Test"];
+    [messageAction send:TEST_UID accessToken:TEST_TOKEN toUid:TEST_OTHERUID content:@"Test"];
     
 }
 
@@ -41,7 +42,7 @@
         STAssertEqualObjects([result objectForKey:@"error_code"], @"50001", @"不能给自己发消息");
     };
     
-    [messageAction send:@19 accessToken:@"85e9f4674ca3ec54541d7103b3778710" toUid:@19 content:@"Test"];
+    [messageAction send:TEST_UID accessToken:TEST_TOKEN toUid:TEST_OTHERUID content:@"Test"];
     
 }
 
@@ -55,7 +56,7 @@
         STAssertEqualObjects([result objectForKey:@"error_code"], @"10005", @"登陆信息已失效");
     };
     
-    [messageAction del:@1 accessToken:@"sss" otherUid:@2];
+    [messageAction del:TEST_UID accessToken:TEST_TOKEN otherUid:TEST_OTHERUID];
     
 }
 

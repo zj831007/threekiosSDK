@@ -8,6 +8,7 @@
 
 #import "GoodsActionTestCase.h"
 #import "GoodsAction.h"
+#import "Constants.h"
 
 @implementation GoodsActionTestCase
 
@@ -20,7 +21,6 @@
 
 - (void)tearDown{
     // Tear-down code here.
-    
     [super tearDown];
 }
 
@@ -33,7 +33,7 @@
         STAssertEqualObjects([result objectForKey:@"error_code"], @"30000", @"发布商品失败");
     };
     
-    [goodsAction publish:[@{@"uid":@1,@"title":@"test"} mutableCopy]];
+    [goodsAction publish:[@{@"uid":TEST_UID,@"title":@"test"} mutableCopy]];
                           
     
 }
@@ -44,7 +44,7 @@
         STAssertEqualObjects([result objectForKey:@"error_code"], @"30006", @"商品ID不存在");
     };
     
-    [goodsAction publish:[@{@"uid":@1,@"title":@"test",@"goods_id":@"11"} mutableCopy]];
+    [goodsAction publish:[@{@"uid":TEST_UID,@"title":@"test",@"goods_id":@"no"} mutableCopy]];
     
     
 }
@@ -70,7 +70,7 @@
         STAssertEqualObjects([result objectForKey:@"error_code"], @"10005", @"登陆失效");
     };
     
-    [goodsAction offline:@1 accessToken:@"33" goodsId:@"dd"];
+    [goodsAction offline:TEST_UID accessToken:TEST_TOKEN goodsId:TEST_GOODSID];
     
 }
 

@@ -8,6 +8,7 @@
 
 #import "UserActionTestCase.h"
 #import "UserAction.h"
+#import "Constants.h"
 
 @implementation UserActionTestCase
 
@@ -32,7 +33,7 @@
         STAssertEqualObjects([result objectForKey:@"error_code"], @"10006", @"用户名重复判断失败");
     };
     
-    [userAction reg:@"justin6" password:@"123456"];
+    [userAction reg:@"justin00" password:@"123456"];
     
 }
 
@@ -40,7 +41,7 @@
 - (void)testReg1{
     UserAction *userAction = [UserAction action];
     userAction.resultErrorBlock = ^(id result){
-        STAssertEqualObjects([result objectForKey:@"error_code"], @"10007", @"用户名包含敏感词");
+        STAssertEqualObjects([result objectForKey:@"error_code"], @"99998", @"用户名包含敏感词");
     };
     [userAction reg:@"法轮功" password:@"123456"];
 }
@@ -66,6 +67,16 @@
     [userAction login:@"111111" password:@"11111111"];
 }
 
+
+- (void)testLogin1{
+    UserAction *userAction = [UserAction action];
+    userAction.resultErrorBlock = ^(id result){
+        STAssertEqualObjects([result objectForKey:@"error_code"], @"88888", @"用户名或密码不正确");
+    };
+    //[userAction login:@"justin00" password:@"123456"];
+}
+
+
 #pragma mark -
 #pragma mark Logout test case
 - (void)testLogout{
@@ -73,7 +84,7 @@
     userAction.resultErrorBlock = ^(id result){
         STAssertEqualObjects([result objectForKey:@"error_code"], @"10012", @"用户ID不存在");
     };
-    [userAction logout:@0 accessToken:@"8888"];
+    [userAction logout:@-1 accessToken:TEST_TOKEN];
 }
 
 - (void)testLogout1{
@@ -81,7 +92,7 @@
     userAction.resultErrorBlock = ^(id result){
         STAssertEqualObjects([result objectForKey:@"error_code"], @"10005", @"用户登陆信息已失效");
     };
-    [userAction logout:@6 accessToken:@"8888"];
+    //[userAction logout:TEST_UID accessToken:TEST_TOKEN];
 }
 
 #pragma mark -
@@ -95,7 +106,7 @@
     userAction.resultErrorBlock = ^(id result){ 
         STAssertEqualObjects([result objectForKey:@"error_code"], @"10012", @"用户ID不存在");
     };
-    [userAction getProfile:@0];
+    [userAction getProfile:@-1];
 }
 
 #pragma mark -
@@ -104,9 +115,18 @@
     
     UserAction *userAction = [UserAction action];
     userAction.resultErrorBlock = ^(id result){
-        STAssertEqualObjects([result objectForKey:@"error_code"], @"10007", @"昵称不能包含敏感词");
+        STAssertEqualObjects([result objectForKey:@"error_code"], @"99998", @"昵称不能包含敏感词");
     };
-    [userAction editProfile:[@{@"nickname":@"法轮功"} mutableCopy]];
+    [userAction editProfile:[@{@"uid":TEST_UID,@"access_token":TEST_TOKEN,@"nickname":@"法轮功"} mutableCopy]];
+}
+
+- (void)testEditProfile1{
+    
+    UserAction *userAction = [UserAction action];
+    userAction.resultErrorBlock = ^(id result){
+        STAssertEqualObjects([result objectForKey:@"error_code"], @"88888", @"修改昵称失败");
+    };
+    [userAction editProfile:[@{@"uid":TEST_UID,@"access_token":TEST_TOKEN,@"nickname":@"Justin_test_1"} mutableCopy]];
 }
 
 @end

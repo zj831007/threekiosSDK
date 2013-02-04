@@ -8,6 +8,7 @@
 
 #import "CommentActionTestCase.h"
 #import "GoodsCommenAction.h"
+#import "Constants.h"
 
 @implementation CommentActionTestCase
 
@@ -31,7 +32,7 @@
         STAssertEqualObjects([result objectForKey:@"error_code"], @"30006", @"商品ID不存在");
     };
     
-    [commentAction getList:[@{@"good_id":@"1"} mutableCopy]];
+    [commentAction getList:[@{@"good_id":TEST_GOODSID} mutableCopy]];
     
 }
 
@@ -45,7 +46,7 @@
         STAssertEqualObjects([result objectForKey:@"error_code"], @"40000", @"商品ID不存在");
     };
     
-    [commentAction reply:@1 accessToken:@"dd" cid:@"dd" answer:@"Test"];
+    [commentAction reply:TEST_UID accessToken:TEST_TOKEN cid:@"dd" answer:@"Test"];
     
 }
 
@@ -58,7 +59,7 @@
         STAssertEqualObjects([result objectForKey:@"error_code"], @"40000", @"商品ID不存在");
     };
     
-    [commentAction post:@1 accessToken:@"ddd" goodsId:@"dd" question:@"test"];
+    [commentAction post:TEST_UID accessToken:TEST_TOKEN goodsId:TEST_GOODSID question:@"test"];
     
 }
 
