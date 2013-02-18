@@ -29,10 +29,11 @@
 - (void)testSend{
     MessageAction *messageAction = [MessageAction action];
     messageAction.resultErrorBlock = ^(id result){
+        
         STAssertEqualObjects([result objectForKey:@"error_code"], @"10012", @"发送方或接收方不存在");
     };
     
-    [messageAction send:TEST_UID accessToken:TEST_TOKEN toUid:@-1 content:@"Test"];
+    [messageAction send:TEST_UID accessToken:TEST_TOKEN toUid:@0 content:@"Test"];
     
 }
 

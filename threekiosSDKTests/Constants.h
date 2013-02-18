@@ -13,7 +13,7 @@
 #define TEST_UID             @19
 #define TEST_OTHERUID        @18
 #define TEST_TOKEN           @"adaeff93d75b5cb2faa80812ae46e31c"
-#define TEST_GOODSID         @""
+#define TEST_GOODSID         @"19136022673649602"
 
 
 #endif

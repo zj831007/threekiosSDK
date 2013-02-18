@@ -56,7 +56,7 @@
 - (void)testPost{
     GoodsCommenAction *commentAction = [GoodsCommenAction action];
     commentAction.resultErrorBlock = ^(id result){
-        STAssertEqualObjects([result objectForKey:@"error_code"], @"30006", @"商品ID不存在");
+        STAssertEqualObjects([result objectForKey:@"error_code"], @"88888", @"商品ID不存在");
     };
     
     [commentAction post:TEST_UID accessToken:TEST_TOKEN goodsId:TEST_GOODSID question:@"test"];
