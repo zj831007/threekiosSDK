@@ -25,5 +25,8 @@
 
 - (void)getList:(NSMutableDictionary *)params;
 
+- (void)getNearbyList:(NSMutableDictionary *)params;
+
+- (void)getPublishList:(NSMutableDictionary *)params;
 
 @end

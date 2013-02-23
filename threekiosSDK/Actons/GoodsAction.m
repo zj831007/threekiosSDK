@@ -43,5 +43,12 @@
     [super getWithAPIPath:@"goods/getList" params:params];
 }
 
+- (void)getNearbyList:(NSMutableDictionary *)params{
+    [super getWithAPIPath:@"goods/getNearbyList" params:params];
+}
+
+- (void)getPublishList:(NSMutableDictionary *)params{
+    [super getWithAPIPath:@"goods/getPublishList" params:params];
+}
 
 @end
